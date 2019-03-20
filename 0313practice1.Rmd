@@ -100,8 +100,12 @@ dtObject = ymd_hms("1990-10-10 00:10:10")
 class(dtObject)
 ```
 ```{r}
-dtObject = 
+class (dtObject)
 ```
+```{r}
+typeof (dtObject)
+```
+
 
 
 
