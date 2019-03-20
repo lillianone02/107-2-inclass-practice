@@ -69,3 +69,39 @@ class(aVector)
 class(a8Vector)
 ```
 
+```{r}
+diaglogue <- c('小明說："明天不用上課。"',
+               '小花說："真的嗎？"')
+
+cat(diaglogue, sep="\n")
+```
+
+```{r}
+studentmajors<-factor(
+  c('經濟系','經濟系','法律系')
+)
+```
+```{r}
+studentmajors<-factor(
+  c("台中","台中","台北")
+```
+```{r}
+dtObject = ymd_hms ("1999-02-02 00:10:10")
+```
+```{r}
+library(lubridate)
+```
+
+```{r}
+dtObject = ymd_hms("1990-10-10 00:10:10") 
+```
+
+```{r}
+class(dtObject)
+```
+```{r}
+dtObject = 
+```
+
+
+
