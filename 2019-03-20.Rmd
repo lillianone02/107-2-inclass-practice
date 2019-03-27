@@ -44,8 +44,74 @@ as.double(twDateTime)
 typeof(LisbonDateTime)
 as.double(LisbonDateTime)
 ```
+```{r}
+ymd("2018-09-11")
+```
+```{r}
+mdy("03-03-2019")
+```
+```{r}
+dtObject<-ymd_hms("1970-01-01 00:02:53") 
+dtObjectVector<-ymd_hms(
+  c("1970-01-01 00:02:53",
+    "1980-02-11 11:25:22")
+)
+class(dtObject)
+typeof(dtObject)
+as.double(dtObject)
+```
+```{r}
+as.integer(ymd('1998-02-02'))
+as.integer(ymd("1998-02-03"))
+```
+```{r}
+a <- c(1, 5, -3)
+b <- c(0.5, 12, 2)
+aL <- c(1L, 5L, -3L)
+bL <- c(-2L, -4L, 8L)
+```
 
+```{r}
+class(a+bL)
+class(a-bL)
+class(a*bL)
+class(aL+bL)
+a-aL
+a-b
+aL-b
+a*b
+a+b
 
+```
+```{r}
+dtObject+1
+```
+```{r}
+c<- ymd("2019-01-01")
+d<- ymd("2019-01-03")
+class(c)
+class(d)
+c-d
+```
+
+```{r}
+cQ<- ymd_hms("2019-03-03 00:00:10")
+dQ<- ymd_hms("2019-03-03 00:00:40")
+class(cQ)
+class(dQ)
+cQ-dQ
+```
+```{r}
+startingDate <- ymd("2000-02-17")
+startingDate + years(1)
+startingDate + dyears(1)
+
+```
+```{r}
+ymd("2000-02-01") -> startingDate
+ymd("2019-08-11") -> endingDate
+endingDate - startingDate
+```
 
 
 
