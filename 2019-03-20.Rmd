@@ -9,3 +9,43 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r}
+library(lubridate)
+```
+```{r}
+twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
+```
+
+```{r}
+LisbonDateTime <- with_tz(twDateTime,tzone="Europe/Lisbon")
+```
+```{r}
+twDateTime <- ymd_hms("2019-03-27 15:33:00", tz="Asia/Taipei")
+```
+```{r}
+LisbonDateTime<-with_tz(twDateTime,tzone ="Europe/Lisbon")
+
+```
+```{r}
+twDateTime<-ymd_hms("2019-03-27 15:00:00",tz="Asia/Taipei" )
+
+twDateTime
+```
+```{r}
+LisbonDateTime<- with_tz(twDateTime, tzone = "Europe/Lisbon")
+
+LisbonDateTime
+```
+```{r}
+typeof(twDateTime)
+as.double(twDateTime)
+```
+```{r}
+typeof(LisbonDateTime)
+as.double(LisbonDateTime)
+```
+
+
+
+
+
