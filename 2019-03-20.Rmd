@@ -8,10 +8,11 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
+##下載lubridate套件
 ```{r}
 library(lubridate)
 ```
+##定義不同地區的時間
 ```{r}
 twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
 ```
@@ -36,6 +37,7 @@ LisbonDateTime<- with_tz(twDateTime, tzone = "Europe/Lisbon")
 
 LisbonDateTime
 ```
+##換算當地時間成秒數
 ```{r}
 typeof(twDateTime)
 as.double(twDateTime)
@@ -44,6 +46,7 @@ as.double(twDateTime)
 typeof(LisbonDateTime)
 as.double(LisbonDateTime)
 ```
+##Google 不同時間的表示法轉換成R看得懂得語言
 ```{r}
 ymd("2018-09-11")
 ```
@@ -64,6 +67,7 @@ as.double(dtObject)
 as.integer(ymd('1998-02-02'))
 as.integer(ymd("1998-02-03"))
 ```
+##定義 並+-*
 ```{r}
 a <- c(1, 5, -3)
 b <- c(0.5, 12, 2)
@@ -83,6 +87,7 @@ a*b
 a+b
 
 ```
+
 ```{r}
 dtObject+1
 ```
@@ -112,6 +117,51 @@ ymd("2000-02-01") -> startingDate
 ymd("2019-08-11") -> endingDate
 endingDate - startingDate
 ```
+##relational
 
+```{r}
+x<-5
+y<-7
+xx<-c(1,2,6)
+yy<-c(4,5,3)
+
+x<y
+x==y
+
+xx<=yy
+xx!=yy
+xx>=yy
+xx>yy
+
+```
+## %in% 看一物是否與另一範圍有交集
+```{r}
+x4 <- c(1,5,8)
+y4 <- c(5,8)
+
+x4 %in% y4
+```
+##文字也可以看集合
+```{r}
+x5 <- c("台北市","新北市","高雄市")
+y5 <- c("台北市","新北市")
+
+x5 %in% y5
+```
+##缺失資料 NA無法作比較
+```{r}
+x6 <- c(1,NA,10)
+y6 <- c(-1,NA,20)
+x6==y6
+
+```
+用is.na(x6)修改
+```{r}
+x6 <- c(1,NA,10)
+y6 <- c(-1,NA,20)
+is.na(x6)
+x6==y6
+
+```
 
 
