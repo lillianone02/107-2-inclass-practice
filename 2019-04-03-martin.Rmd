@@ -141,12 +141,19 @@ y5=="女"
 
 > 圈圏是要圏出"Relational Operation"為真的元素在物件內的「位置」
 
+
+#以下練習&的用法 圈出同時滿足左右 為真的位置/元素
 ```{r}
 x5 %in% greatTaipei
 y5 == "女"
-(x5 %in% greatTaipei) & (y5=="女") # 同時（&）來自於greatTaipei 又是 女 性。
+(x5 %in% greatTaipei) & # 同時（&）來自於greatTaipei 又是 女 性。
 ```
+跑出來的結果
+第一航是(x5 %in% greatTaipei)的結果
+第二航是 (y5=="女")的結果
+第三航是（&）來自於greatTaipei 又是 女 性
 
+#which 使用這個函數會直接顯示出圈出來的結果為真的位置
 ```{r}
 which((x5 %in% greatTaipei) & (y5=="女"))
 ```
@@ -155,24 +162,27 @@ which((x5 %in% greatTaipei) & (y5=="女"))
 x5
 y5
 ```
-
+#or |
 ```{r}
 (x5 %in% greatTaipei)
 (y5=="女")
 (x5 %in% greatTaipei) | (y5=="女")
 ```
-
-
+我試著練習直接下我要得到定義 不用再分別寫這兩個條件
+```{r}
+(x5 %in% greatTaipei) | (y5=="女")
+```
+or一樣可以用which找出符合條件的位置
 ```{r}
 which((x5 %in% greatTaipei) | (y5=="女"))
 ```
-
+#xor找出只滿足其中一個條件的元素(即全部扣掉&為真的元素)
 ```{r}
 x5 %in% greatTaipei
 y5=="女"
 xor(x5 %in% greatTaipei, y5=="女")
 ```
-
+#which找出xor的元素位置
 
 
 ```{r}
@@ -181,6 +191,7 @@ which(xor(x5 %in% greatTaipei, y5=="女"))
 
 
 綜合練習
+#引入資料
 ```{r}
 library(readr)
 exData2 <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/exData2.csv")
@@ -195,7 +206,19 @@ class(date)
 ```
 
 ```{r}
+class(date)
+```
+
+```{r}
 head(date)
+```
+```{r}
+head(date)
+```
+#引入lubridate 然後用library啟動它 之後重新定義我們的date為ymd(也就是將ymd引入date)
+```{r}
+library(lubridate)
+date<-ymd(date)
 ```
 
 ```{r}
