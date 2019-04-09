@@ -247,23 +247,28 @@ head(as.integer(date))
 as.integer(ymd("1980-08-01"))
 head(date >= ymd("1980-08-01"))
 ```
-節給
+結果
 1 head(as.integer(date))表示第一筆資料比utc少3653天 第二筆少了3622天...等
 2 as.integer(ymd("1980-08-01"))表示1980-08-01在電腦裡面存成3865(比utc多3865天)
 3 head(date >= ymd("1980-08-01"))顯示date前6筆>=ymd("1980-08-01")的結果
 ```{r}
 class(isAfter19800801)
 ```
-
+結果logical表示裡面都是1010...(t f t f ...)
 ```{r}
 sum(isAfter19800801)
 ```
-
+結果 isAfter19800801的數量 此為第二題答案
 
 幣別為“歐元USD/EUR”的資料有多少筆。
+#幣別為currency
 ```{r}
 head(currency)
 
+```
+
+```{r}
+isEURO <- currency == "歐元USD/EUR"
 ```
 
 ```{r}
@@ -275,7 +280,7 @@ isEURO <- currency == "歐元USD/EUR"
 ```{r}
 sum(isEURO)
 ```
-
+結果第三題的答案 isEURO有705筆
 
 有將currency轉成factor class
 ```{r}
@@ -288,6 +293,7 @@ sum(isEURO)
 ```
 
 exchangeRate有多少筆NA
+#先用is.na算出NA資料有多少筆(轉換成1100的形式) 才能加總
 ```{r}
 isExchangeRateNA <-
   is.na(exchangeRate)
@@ -313,6 +319,46 @@ satifyBoth <-
   !is.na(exchangeRate) & currency == "歐元USD/EUR"
 sum(satisfyBoth)
 ```
+
+
+
+
+練習題
+```{r}
+library(readr)
+transcriptDataFinal <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcriptDataFinal.csv")
+courseType <- transcriptDataFinal$`必選修類別（必∕選∕通）`
+major <- transcriptDataFinal$學系
+studentID <- transcriptDataFinal$學號
+grade <- transcriptDataFinal$學期成績
+```
+```{r}
+sum(major== "經濟學系")
+```
+
+```{r}
+sum(major== "經濟學系" & courseType== "選")
+```
+```{r}
+sum(major== "經濟學系" & courseType== "必")->分母
+```
+
+```{r}
+sum(major == "經濟學系" &courseType == "必") -> 分母
+```
+
+```{r}
+sum(major == "經濟學系" &courseType == "必" & grade<60) -> 分子
+```
+
+```{r}
+分子/分母
+```
+
+
+
+
+
 
 
 ```{r}
