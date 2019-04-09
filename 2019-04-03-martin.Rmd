@@ -19,13 +19,24 @@ y3 <- c("小明","小華")
 x3 == y3
 x3 != y3
 ```
+```{r}
+x3==y3
+x3!=y3
+```
 
+#negation 的操作也可以用在所有邏輯操作上(大魚小魚也可以)
+它的操作是 在原本的邏輯敘述前面加上!()裡面的邏輯敘述就會相反
 ! negation
 ```{r}
 x3 == y3
 !(x3 == y3)
 ```
-
+# class類別 factor種類 level 屬性
+1. head抓出currency 前6個資料是什麼
+2. class currency 看他屬於什麼類別(看到分類我就想到類別)
+   class 出來結果為charactor 沒有類別
+3. 我先用as.factor去把舊的currency 轉換成新的 具類別的currency
+4. 轉換出來的新的 具有類別的currency 去做levels 即可得出currency所有的類別
 ```{r}
 library(readr)
 exData2 <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/exData2.csv")
@@ -45,22 +56,23 @@ levels(currency)
 class(currency)
 ```
 
-更正為factor class
+#更正為factor class
 ```{r}
 currency <- as.factor(currency)
 class(currency)
 ```
-
+重新定義currency 新的定義currency <- as.factor(currency)舊定義
+把currency 定義為factor 當它是factor的時候才有意義去執行levels
 
 ```{r}
 levels(currency)
 ```
 
-length(): 數向量內的元素個數（向量長度）
+#length(): 數向量內的元素個數（向量長度）
 ```{r}
 length(levels(currency))
 ```
-
+#不懂
 ```{r}
 step1_extractLevelsVector <- levels(currency)
 step1_extractLevelsVector
@@ -72,7 +84,7 @@ step2_countVectorLength <- length(step1_extractLevelsVector)
 
 ```{r}
 step2_countVectorLength
-```
+``` 一個內容的存量直
 
 多少筆日元資料
 
