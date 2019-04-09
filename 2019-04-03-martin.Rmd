@@ -225,26 +225,32 @@ date<-ymd(date)
 library(lubridate)
 date <- ymd(date)
 ```
-
+#這時重新class date 就會從charactor變成date
 ```{r}
 class(date)
 ```
 
-1980-08-01之後的資料有多少筆。
 
+1980-08-01之後的資料有多少筆。
+#isafter 19800801之後的資料為真 
+isAfter是我自己定義的新東西(我要的答案)
+它的定義是date(已經用lubtidate定義為ymd了)要>=(大於等於)1998-08-01
 ```{r}
 isAfter19800801 <-
   date >= ymd("1980-08-01")
 isAfter19800801
 ```
-
-
+#不懂as.interger在這裡的作用
+#as.imterger 看資料的內容
 ```{r}
 head(as.integer(date))
 as.integer(ymd("1980-08-01"))
 head(date >= ymd("1980-08-01"))
 ```
-
+節給
+1 head(as.integer(date))表示第一筆資料比utc少3653天 第二筆少了3622天...等
+2 as.integer(ymd("1980-08-01"))表示1980-08-01在電腦裡面存成3865(比utc多3865天)
+3 head(date >= ymd("1980-08-01"))顯示date前6筆>=ymd("1980-08-01")的結果
 ```{r}
 class(isAfter19800801)
 ```
