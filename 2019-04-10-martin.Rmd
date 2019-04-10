@@ -8,11 +8,34 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
+#下在stringr
 ```{r}
 library(stringr)
 ```
 ```{r}
 install.packages("stringr")
 ```
+#str_subse 抓出全部資料裡面包含你要找的資料
+```{r}
+course <- c("個體經濟學","投資學","總體經濟學")
+str_subset(course,"經濟學")
+str_detect(course,"經濟學")
+```
+```{r}
+studentID<-c(
+  '410177115','410176080','410174233','410177011','410182045','410176014')
+```
+```{r}
+str_subset(studentID,5,6)
+```
+#取出第A到B內的字元
+```{r}
+系別<-str_sub(studentID,5,6)
+系別
+入學年<-str_sub(studentID,2,4)
+入學年
+
+
+```
+
 
