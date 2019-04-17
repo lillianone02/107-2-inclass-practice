@@ -148,7 +148,7 @@ str_split(favoriteTwo,", ") -> favoriteTwoList # 將選擇的兩片split成兩�
 unlist(favoriteTwoList) -> allVotes # 將list堆疊成atomic vector
 table(allVotes) # 計算每個類別的次數
 ```
-
+logic factor grade>=60
 
 
 
