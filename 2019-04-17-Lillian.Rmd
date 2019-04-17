@@ -102,4 +102,9 @@ plasticContainer[c(T,F,T)]
 成績單
 成績單[c(FALSE,TRUE,TRUE)]
 ```
+```{r}
+plasticContainer$greenBox
+plasticContainer[["greenBox"]]
+```
+
 
