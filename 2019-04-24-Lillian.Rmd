@@ -126,6 +126,11 @@ ans1
 ans1 <- classSurvey[c(1:60),c(4,5)]
 
 ```
+```{r}
+ans1 <- classSurvey[4=="女"]
+ans1
+```
+
 
 
 
