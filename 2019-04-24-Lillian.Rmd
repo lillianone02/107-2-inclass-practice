@@ -48,7 +48,55 @@ StuDF
 
 ```{r}
 ans <-StuDF[[2]][[3]]
+ans <-StuDF[["姓名"]][[3]]
 ans
 ```
+```{r}
+class(StuDF$姓名)
+StuDF$姓名 <- as.character(StuDF$姓名)
+class(StuDF$姓名)
+```
+```{r}
+StuDF2 <- data.frame(
+  學號=c(172,214,322,425,517),
+  姓名=c("小明","大雄","胖虎","小新","大白"),
+  成績=c(80,60,90,70,50),
+  stringsAsFactors = FALSE
+  )
+StuDF2 
+```
+```{r}
+StuList <- list(
+  學號=c(172,214,322,425,517),
+  姓名=c("小明","大雄","胖虎","小新","大白"),
+  成績=c(80,60,90,70,50)
+  )
+StuList 
+
+```
+```{r}
+as.data.frame(StuList) -> StuDF3
+
+class(StuDF3)
+```
+
+```{r}
+as.data.frame(StuList,stringsAsFactors = F) -> StuDF4
+class(StuDF4)
+```
+```{r}
+chosenLETTERS <- LETTERS[1:15]
+chosenLETTERS
+chosenletters <- letters[1:15]
+chosenletters
+```
+```{r}
+matObj1 <-matrix(chosenLETTERS,5,3)
+matObj1 
+matObj11 <-matrix(chosenLETTERS,3,5)
+matObj11 
+```
+
+
 
 

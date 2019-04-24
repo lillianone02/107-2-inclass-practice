@@ -1830,8 +1830,9 @@ StuDF </code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYW5zIDwtU3R1REZbWzJdXVtbM11dXG5hbnNcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYW5zIDwtU3R1REZbWzJdXVtbM11dXG5hbnMgPC1TdHVERltbXCLlp5PlkI1cIl1dW1szXV1cbmFuc1xuYGBgIn0= -->
 <pre class="r"><code>ans &lt;-StuDF[[2]][[3]]
+ans &lt;-StuDF[[&quot;姓名&quot;]][[3]]
 ans</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIOiDluiZjlxuTGV2ZWxzOiDlpKfnmb0g5aSn6ZuEIOWwj+aYjiDlsI/mlrAg6IOW6JmOXG4ifQ== -->
@@ -1839,10 +1840,124 @@ ans</code></pre>
 Levels: 大白 大雄 小明 小新 胖虎</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoU3R1REYk5aeT5ZCNKVxuYGBgIn0= -->
+<pre class="r"><code>class(StuDF$姓名)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiY2hhcmFjdGVyXCJcbiJ9 -->
+<pre><code>[1] &quot;character&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3R1REYk5aeT5ZCNIDwtIGFzLmNoYXJhY3RlcihTdHVERiTlp5PlkI0pXG5jbGFzcyhTdHVERiTlp5PlkI0pXG5gYGAifQ== -->
+<pre class="r"><code>StuDF$姓名 &lt;- as.character(StuDF$姓名)
+class(StuDF$姓名)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiY2hhcmFjdGVyXCJcbiJ9 -->
+<pre><code>[1] &quot;character&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3R1REYyIDwtIGRhdGEuZnJhbWUoXG4gIOWtuOiZnz1jKDE3MiwyMTQsMzIyLDQyNSw1MTcpLFxuICDlp5PlkI09YyhcIuWwj+aYjlwiLFwi5aSn6ZuEXCIsXCLog5bomY5cIixcIuWwj+aWsFwiLFwi5aSn55m9XCIpLFxuICDmiJDnuL49Yyg4MCw2MCw5MCw3MCw1MCksXG4gIHN0cmluZ3NBc0ZhY3RvcnMgPSBGQUxTRVxuICApXG5TdHVERjIgXG5gYGAifQ== -->
+<pre class="r"><code>StuDF2 &lt;- data.frame(
+  學號=c(172,214,322,425,517),
+  姓名=c(&quot;小明&quot;,&quot;大雄&quot;,&quot;胖虎&quot;,&quot;小新&quot;,&quot;大白&quot;),
+  成績=c(80,60,90,70,50),
+  stringsAsFactors = FALSE
+  )
+StuDF2 </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6NX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJndHlpVERpaXVCaVlHQmdZbUJtWldaZ1lnWXlXWmlBQkNNREN3TW5pSzVnWUdBV0JqSkFNbnhBek9xUTJzQUFBZzVaQnlCMGlRS0VycG9Bb1JzMEdLQkFBS1FlaUVFR3NTd3BXUGtMenM3YXRoN0dYdXV5NmhWQ3pmWmloSnFsVitGMmhrQU1kUENEMG1GUU53UkNhVStZbFNpT1o4MUx6RTB0aGpxRUdXYnd2dU03ZHNMWUszT1hoY1BZeTFZY2pFSXpnTE1vdjF3UFpnZ3ZLSmdnOW9GOGhXcFRjazVpTWN3bW1DQlhTbUpKb2w1YUVWQS9rUGNQVFF0N2ZrRkpabjRlVUJPVE1EU2NrRFV6RnFFSjhKZm1nVnlTb3B1Y1VacVhyV3NHc2dBc0RRRzhVRFlyRXBzWllpWFRmM2hjUUl4aVM4MUx6OHhMaGJrOUp6RXBOUWZLNFFQNkdPeGh2WUtpekx3U21FK0Fvc1Y2SmZrbGlUQjFYTW41T1RBUnNOOFkvZ0VBaTROL3BFMENBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["學號"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["姓名"],"name":[2],"type":["chr"],"align":["left"]},{"label":["成績"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"172","2":"小明","3":"80"},{"1":"214","2":"大雄","3":"60"},{"1":"322","2":"胖虎","3":"90"},{"1":"425","2":"小新","3":"70"},{"1":"517","2":"大白","3":"50"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3R1TGlzdCA8LSBsaXN0KFxuICDlrbjomZ89YygxNzIsMjE0LDMyMiw0MjUsNTE3KSxcbiAg5aeT5ZCNPWMoXCLlsI/mmI5cIixcIuWkp+mbhFwiLFwi6IOW6JmOXCIsXCLlsI/mlrBcIixcIuWkp+eZvVwiKSxcbiAg5oiQ57i+PWMoODAsNjAsOTAsNzAsNTApXG4gIClcblN0dUxpc3QgXG5gYGAifQ== -->
+<pre class="r"><code>StuList &lt;- list(
+  學號=c(172,214,322,425,517),
+  姓名=c(&quot;小明&quot;,&quot;大雄&quot;,&quot;胖虎&quot;,&quot;小新&quot;,&quot;大白&quot;),
+  成績=c(80,60,90,70,50)
+  )
+StuList </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJOWtuOiZn1xuWzFdIDE3MiAyMTQgMzIyIDQyNSA1MTdcblxuJOWnk+WQjVxuWzFdIFwi5bCP5piOXCIgXCLlpKfpm4RcIiBcIuiDluiZjlwiIFwi5bCP5pawXCIgXCLlpKfnmb1cIlxuXG4k5oiQ57i+XG5bMV0gODAgNjAgOTAgNzAgNTBcbiJ9 -->
+<pre><code>$學號
+[1] 172 214 322 425 517
+
+$姓名
+[1] &quot;小明&quot; &quot;大雄&quot; &quot;胖虎&quot; &quot;小新&quot; &quot;大白&quot;
+
+$成績
+[1] 80 60 90 70 50</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZGF0YS5mcmFtZShTdHVMaXN0KSAtPiBTdHVERjNcblxuY2xhc3MoU3R1REYzKVxuYGBgIn0= -->
+<pre class="r"><code>as.data.frame(StuList) -&gt; StuDF3
+
+class(StuDF3)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZGF0YS5mcmFtZVwiXG4ifQ== -->
+<pre><code>[1] &quot;data.frame&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZGF0YS5mcmFtZShTdHVMaXN0LHN0cmluZ3NBc0ZhY3RvcnMgPSBGKSAtPiBTdHVERjRcbmNsYXNzKFN0dURGNClcbmBgYCJ9 -->
+<pre class="r"><code>as.data.frame(StuList,stringsAsFactors = F) -&gt; StuDF4
+class(StuDF4)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZGF0YS5mcmFtZVwiXG4ifQ== -->
+<pre><code>[1] &quot;data.frame&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hvc2VuTEVUVEVSUyA8LSBMRVRURVJTWzE6MTVdXG5jaG9zZW5MRVRURVJTXG5gYGAifQ== -->
+<pre class="r"><code>chosenLETTERS &lt;- LETTERS[1:15]
+chosenLETTERS</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIkFcIiBcIkJcIiBcIkNcIiBcIkRcIiBcIkVcIiBcIkZcIiBcIkdcIiBcIkhcIiBcIklcIiBcIkpcIiBcIktcIiBcIkxcIiBcIk1cIiBcIk5cIiBcIk9cIlxuIn0= -->
+<pre><code> [1] &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot; &quot;F&quot; &quot;G&quot; &quot;H&quot; &quot;I&quot; &quot;J&quot; &quot;K&quot; &quot;L&quot; &quot;M&quot; &quot;N&quot; &quot;O&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hvc2VubGV0dGVycyA8LSBsZXR0ZXJzWzE6MTVdXG5jaG9zZW5sZXR0ZXJzXG5gYGAifQ== -->
+<pre class="r"><code>chosenletters &lt;- letters[1:15]
+chosenletters</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcImFcIiBcImJcIiBcImNcIiBcImRcIiBcImVcIiBcImZcIiBcImdcIiBcImhcIiBcImlcIiBcImpcIiBcImtcIiBcImxcIiBcIm1cIiBcIm5cIiBcIm9cIlxuIn0= -->
+<pre><code> [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot; &quot;k&quot; &quot;l&quot; &quot;m&quot; &quot;n&quot; &quot;o&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWF0T2JqMSA8LW1hdHJpeChjaG9zZW5MRVRURVJTLDUsMylcbm1hdE9iajEgXG5gYGAifQ== -->
+<pre class="r"><code>matObj1 &lt;-matrix(chosenLETTERS,5,3)
+matObj1 </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSBcIkFcIiAgXCJGXCIgIFwiS1wiIFxuWzIsXSBcIkJcIiAgXCJHXCIgIFwiTFwiIFxuWzMsXSBcIkNcIiAgXCJIXCIgIFwiTVwiIFxuWzQsXSBcIkRcIiAgXCJJXCIgIFwiTlwiIFxuWzUsXSBcIkVcIiAgXCJKXCIgIFwiT1wiIFxuIn0= -->
+<pre><code>     [,1] [,2] [,3]
+[1,] &quot;A&quot;  &quot;F&quot;  &quot;K&quot; 
+[2,] &quot;B&quot;  &quot;G&quot;  &quot;L&quot; 
+[3,] &quot;C&quot;  &quot;H&quot;  &quot;M&quot; 
+[4,] &quot;D&quot;  &quot;I&quot;  &quot;N&quot; 
+[5,] &quot;E&quot;  &quot;J&quot;  &quot;O&quot; </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWF0T2JqMTEgPC1tYXRyaXgoY2hvc2VuTEVUVEVSUywzLDUpXG5tYXRPYmoxMSBcbmBgYCJ9 -->
+<pre class="r"><code>matObj11 &lt;-matrix(chosenLETTERS,3,5)
+matObj11 </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXSBbLDRdIFssNV1cblsxLF0gXCJBXCIgIFwiRFwiICBcIkdcIiAgXCJKXCIgIFwiTVwiIFxuWzIsXSBcIkJcIiAgXCJFXCIgIFwiSFwiICBcIktcIiAgXCJOXCIgXG5bMyxdIFwiQ1wiICBcIkZcIiAgXCJJXCIgIFwiTFwiICBcIk9cIiBcbiJ9 -->
+<pre><code>     [,1] [,2] [,3] [,4] [,5]
+[1,] &quot;A&quot;  &quot;D&quot;  &quot;G&quot;  &quot;J&quot;  &quot;M&quot; 
+[2,] &quot;B&quot;  &quot;E&quot;  &quot;H&quot;  &quot;K&quot;  &quot;N&quot; 
+[3,] &quot;C&quot;  &quot;F&quot;  &quot;I&quot;  &quot;L&quot;  &quot;O&quot; </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIjA0MjQgcHJhY3RpY2UiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCg0KDQpgYGB7cn0NCk1hdDEgPC0gbWF0cml4KA0KICBjKDE6NiksIDIsMw0KKQ0KTWF0MQ0KYGBgDQpgYGB7cn0NCk1hdDEgPC0gbWF0cml4KA0KICBjKDE6NiksIDMsMg0KKQ0KTWF0MQ0KYGBgDQoNCmBgYHtyfQ0KY2xhc3MoTWF0MSkNCnR5cGVvZihNYXQxKQ0KYGBgDQpgYGB7cn0NCk1hdDIgPC0gbWF0cml4KA0KICBjKCJhIiwiYiIsImMiLCJkIiksIDIsIDINCikNCk1hdDINCmBgYA0KYGBge3J9DQpTdHVMaXN0IDwtIGxpc3QoDQogIOWtuOiZnz1jKDE3MiwyMTQsMzIyLDQyNSw1MTcpLA0KICDlp5PlkI09Yygi5bCP5piOIiwi5aSn6ZuEIiwi6IOW6JmOIiwi5bCP5pawIiwi5aSn55m9IiksDQogIOaIkOe4vj1jKDgwLDYwLDkwLDcwLDUwKQ0KICApDQpTdHVMaXN0IA0KYGBgDQpgYGB7cn0NClN0dURGIDwtIGRhdGEuZnJhbWUoDQogIOWtuOiZnz1jKDE3MiwyMTQsMzIyLDQyNSw1MTcpLA0KICDlp5PlkI09Yygi5bCP5piOIiwi5aSn6ZuEIiwi6IOW6JmOIiwi5bCP5pawIiwi5aSn55m9IiksDQogIOaIkOe4vj1jKDgwLDYwLDkwLDcwLDUwKQ0KICApDQpTdHVERiANCmBgYA0KDQpgYGB7cn0NCmFucyA8LVN0dURGW1syXV1bWzNdXQ0KYW5zDQpgYGANCg0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIjA0MjQgcHJhY3RpY2UiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCg0KDQpgYGB7cn0NCk1hdDEgPC0gbWF0cml4KA0KICBjKDE6NiksIDIsMw0KKQ0KTWF0MQ0KYGBgDQpgYGB7cn0NCk1hdDEgPC0gbWF0cml4KA0KICBjKDE6NiksIDMsMg0KKQ0KTWF0MQ0KYGBgDQoNCmBgYHtyfQ0KY2xhc3MoTWF0MSkNCnR5cGVvZihNYXQxKQ0KYGBgDQpgYGB7cn0NCk1hdDIgPC0gbWF0cml4KA0KICBjKCJhIiwiYiIsImMiLCJkIiksIDIsIDINCikNCk1hdDINCmBgYA0KYGBge3J9DQpTdHVMaXN0IDwtIGxpc3QoDQogIOWtuOiZnz1jKDE3MiwyMTQsMzIyLDQyNSw1MTcpLA0KICDlp5PlkI09Yygi5bCP5piOIiwi5aSn6ZuEIiwi6IOW6JmOIiwi5bCP5pawIiwi5aSn55m9IiksDQogIOaIkOe4vj1jKDgwLDYwLDkwLDcwLDUwKQ0KICApDQpTdHVMaXN0IA0KYGBgDQpgYGB7cn0NClN0dURGIDwtIGRhdGEuZnJhbWUoDQogIOWtuOiZnz1jKDE3MiwyMTQsMzIyLDQyNSw1MTcpLA0KICDlp5PlkI09Yygi5bCP5piOIiwi5aSn6ZuEIiwi6IOW6JmOIiwi5bCP5pawIiwi5aSn55m9IiksDQogIOaIkOe4vj1jKDgwLDYwLDkwLDcwLDUwKQ0KICApDQpTdHVERiANCmBgYA0KDQpgYGB7cn0NCmFucyA8LVN0dURGW1syXV1bWzNdXQ0KYW5zIDwtU3R1REZbWyLlp5PlkI0iXV1bWzNdXQ0KYW5zDQpgYGANCmBgYHtyfQ0KY2xhc3MoU3R1REYk5aeT5ZCNKQ0KU3R1REYk5aeT5ZCNIDwtIGFzLmNoYXJhY3RlcihTdHVERiTlp5PlkI0pDQpjbGFzcyhTdHVERiTlp5PlkI0pDQpgYGANCmBgYHtyfQ0KU3R1REYyIDwtIGRhdGEuZnJhbWUoDQogIOWtuOiZnz1jKDE3MiwyMTQsMzIyLDQyNSw1MTcpLA0KICDlp5PlkI09Yygi5bCP5piOIiwi5aSn6ZuEIiwi6IOW6JmOIiwi5bCP5pawIiwi5aSn55m9IiksDQogIOaIkOe4vj1jKDgwLDYwLDkwLDcwLDUwKSwNCiAgc3RyaW5nc0FzRmFjdG9ycyA9IEZBTFNFDQogICkNClN0dURGMiANCmBgYA0KYGBge3J9DQpTdHVMaXN0IDwtIGxpc3QoDQogIOWtuOiZnz1jKDE3MiwyMTQsMzIyLDQyNSw1MTcpLA0KICDlp5PlkI09Yygi5bCP5piOIiwi5aSn6ZuEIiwi6IOW6JmOIiwi5bCP5pawIiwi5aSn55m9IiksDQogIOaIkOe4vj1jKDgwLDYwLDkwLDcwLDUwKQ0KICApDQpTdHVMaXN0IA0KDQpgYGANCmBgYHtyfQ0KYXMuZGF0YS5mcmFtZShTdHVMaXN0KSAtPiBTdHVERjMNCg0KY2xhc3MoU3R1REYzKQ0KYGBgDQoNCmBgYHtyfQ0KYXMuZGF0YS5mcmFtZShTdHVMaXN0LHN0cmluZ3NBc0ZhY3RvcnMgPSBGKSAtPiBTdHVERjQNCmNsYXNzKFN0dURGNCkNCmBgYA0KYGBge3J9DQpjaG9zZW5MRVRURVJTIDwtIExFVFRFUlNbMToxNV0NCmNob3NlbkxFVFRFUlMNCmNob3NlbmxldHRlcnMgPC0gbGV0dGVyc1sxOjE1XQ0KY2hvc2VubGV0dGVycw0KYGBgDQpgYGB7cn0NCm1hdE9iajEgPC1tYXRyaXgoY2hvc2VuTEVUVEVSUyw1LDMpDQptYXRPYmoxIA0KbWF0T2JqMTEgPC1tYXRyaXgoY2hvc2VuTEVUVEVSUywzLDUpDQptYXRPYmoxMSANCmBgYA0KDQoNCg0KDQo=</div>
 
 
 
