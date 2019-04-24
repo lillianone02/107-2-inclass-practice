@@ -1,0 +1,17 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+library(stringr)
+library(lubridate)
+TyphoonData <- read_csv("https://raw.githubusercontent.com/GaryLKL/course-programming-for-ds-Quiz/master/TyphoonData.csv", col_types = cols(.default = col_character()))
+Year <- TyphoonData$年份
+Yearz<-as.integer(Year)
+Yearz-1911->Yeasx
+
+```
+
+

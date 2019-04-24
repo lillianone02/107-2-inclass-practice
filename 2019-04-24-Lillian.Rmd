@@ -46,5 +46,9 @@ StuDF <- data.frame(
 StuDF 
 ```
 
+```{r}
+ans <-StuDF[[2]][[3]]
+ans
+```
 
 
