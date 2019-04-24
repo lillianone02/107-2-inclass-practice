@@ -112,6 +112,21 @@ matObj1[c(1,4),c(2,3)]
 matObj1 <- matObj1[c(T,F,F,F,T),c(F,T,T)]
 matObj1
 ```
+```{r}
+library(readr)
+classSurvey <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/classSurvey.csv")
+```
+```{r}
+ans1 <- as.data.frame(classSurvey)
+ans1
+ans1[c(1:60),c(4,5)]
+ans1
+
+
+ans1 <- classSurvey[c(1:60),c(4,5)]
+
+```
+
 
 
 
