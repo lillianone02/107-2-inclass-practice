@@ -96,6 +96,22 @@ matObj1
 matObj11 <-matrix(chosenLETTERS,3,5)
 matObj11 
 ```
+#tolower(m) # 轉成小寫
+m
+#toupper(m) # 轉成大寫
+m
+```{r}
+matObj1
+matObj1[[8]]
+matObj1[[3,2]]
+matObj1[3,2]
+
+```
+```{r}
+matObj1[c(1,4),c(2,3)]
+matObj1 <- matObj1[c(T,F,F,F,T),c(F,T,T)]
+matObj1
+```
 
 
 
