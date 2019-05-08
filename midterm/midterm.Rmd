@@ -191,6 +191,8 @@ sampledTranscriptData$學期成績[chosenSubjectLogi] -> chosenGrades
 sum(chosenGrades<60)/length(chosenGrades) -> failRate
 
 failRate
+#我錯的
+c(sampledTranscriptData$科目名稱==科目204)
 ```
 
 
@@ -208,6 +210,14 @@ failRate
 
 ```{r ans73}
 # sampledTranscriptData$學系 
+系級<- sampledTranscriptData$系級
+sampledTranscriptData$學系 <- str_replace_all(sampledTranscriptData,"c(1,2,3,4,5,6)","" ) 
+
+sampledTranscriptData$學系
+
+sampledTranscriptData$學系 <- str_replace(sampledTranscriptData$系級,"[1234]","")
+
+sampledTranscriptData$學系
 ```
 
 ### 7.4 轉系生
