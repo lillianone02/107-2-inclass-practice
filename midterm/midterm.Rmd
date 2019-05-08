@@ -127,6 +127,13 @@ str_sub(twDates,3,5) ->yearcharacter
 yearcharacter
 as.integer(yearcharacter)+1911 -> westYears
 
+#做法2
+str_split(twDates2,"年") -> dateList
+map(dateList,~.[[1]]) -> yy
+as.integer(yy)+1911 -> westYears
+
+westYears
+
 ```
 
 ### 5.3 西元年月日
@@ -134,10 +141,10 @@ as.integer(yearcharacter)+1911 -> westYears
 
 ```{r ans53}
 # westDates
-map(dateList,~.[[2]]) -> mm
+map(dateList,~.[[2]]) -> mm  #為什麼要再取一次mm而不原本的?
 str_c(westYears,mm,"1",sep="-") -> ymdString
 ymd(ymdString) -> westDates
-
+#轉成date class
 westDates
 ```
 
