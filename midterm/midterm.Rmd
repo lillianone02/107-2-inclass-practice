@@ -134,6 +134,11 @@ as.integer(yearcharacter)+1911 -> westYears
 
 ```{r ans53}
 # westDates
+map(dateList,~.[[2]]) -> mm
+str_c(westYears,mm,"1",sep="-") -> ymdString
+ymd(ymdString) -> westDates
+
+westDates
 ```
 
 
