@@ -1843,10 +1843,43 @@ StuDF4</code></pre>
 typeof(StuDF)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTEVUVEVSUyAjIFLlhafoqK3lhYPntKDlgLzngrroi7HmloflrZfmr43nvqTnmoRjaGFyYWN0ZXIgdmVjdG9yXG5jaG9zZW5MRVRURVJTIDwtIExFVFRFUlNbMToxNV1cbm1hdE9iajEgPC0gbWF0cml4KGNob3NlbkxFVFRFUlMsNSwzKVxubWF0T2JqMVxuYGBgIn0= -->
+<pre class="r"><code>LETTERS # R內設元素值為英文字母群的character vector
+chosenLETTERS &lt;- LETTERS[1:15]
+matObj1 &lt;- matrix(chosenLETTERS,5,3)
+matObj1</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hvc2VuTEVUVEVSU1s4XVxubWF0T2JqMVs4XVxuYGBgIn0= -->
+<pre class="r"><code>chosenLETTERS[8]
+matObj1[8]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWF0T2JqMVxubWF0T2JqMVszLDJdIFxubWF0T2JqMVtjKEYsRixUUlVFLEYsRiksYyhGLFRSVUUsRildXG5gYGAifQ== -->
+<pre class="r"><code>matObj1
+matObj1[3,2] 
+matObj1[c(F,F,TRUE,F,F),c(F,TRUE,F)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3R1REZcblN0dURGW2MoXCLlp5PlkI1cIixcIuaIkOe4vlwiKV0gXG5TdHVERlsxOjUsYyhcIuWnk+WQjVwiLFwi5oiQ57i+XCIpXSBcbmBgYCJ9 -->
+<pre class="r"><code>StuDF
+StuDF[c(&quot;姓名&quot;,&quot;成績&quot;)] 
+StuDF[1:5,c(&quot;姓名&quot;,&quot;成績&quot;)] </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3R1REZbLGMoXCLlp5PlkI1cIixcIuaIkOe4vlwiKV1cbmBgYCJ9 -->
+<pre class="r"><code>StuDF[,c(&quot;姓名&quot;,&quot;成績&quot;)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTktMDUtMTUgTGlsbGlhbiINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCmBgYHtyfQ0KTWF0MSA8LSBtYXRyaXgoDQogIGMoMTo2KSwgMiwzDQopDQpNYXQxDQpgYGANCg0KYGBge3J9DQpjbGFzcyhNYXQxKQ0KdHlwZW9mKE1hdDEpDQpgYGANCmBgYHtyfQ0KTWF0MiA8LSBtYXRyaXgoDQogIGMoImEiLCJiIiwiYyIsImQiKSwgMiwgMg0KKQ0KTWF0Mg0KYGBgDQpgYGB7cn0NClN0dUxpc3QgPC0gbGlzdCgNCiAg5a246JmfPWMoMTcyLDIxNCwzMjIsNDI1LDUxNyksDQogIOWnk+WQjT1jKCLlsI/mmI4iLCLlpKfpm4QiLCLog5bomY4iLCLlsI/mlrAiLCLlpKfnmb0iKSwNCiAg5oiQ57i+PWMoODAsNjAsOTAsNzAsNTApDQogICkNClN0dUxpc3QgDQpgYGANCmBgYHtyfQ0KU3R1REYgPC0gZGF0YS5mcmFtZSgNCiAg5a246JmfPWMoMTcyLDIxNCwzMjIsNDI1LDUxNyksDQogIOWnk+WQjT1jKCLlsI/mmI4iLCLlpKfpm4QiLCLog5bomY4iLCLlsI/mlrAiLCLlpKfnmb0iKSwNCiAg5oiQ57i+PWMoODAsNjAsOTAsNzAsNTApDQogICkNClN0dURGIA0KYGBgDQpgYGB7cn0NCmNsYXNzKFN0dURGJOWnk+WQjSkNCg0KU3R1REYk5aeT5ZCNIDwtIGFzLmNoYXJhY3RlcihTdHVERiTlp5PlkI0pDQpjbGFzcyhTdHVERiTlp5PlkI0pDQpgYGANCmBgYHtyfQ0KY2xhc3MoU3R1TGlzdCkNCmFzLmRhdGEuZnJhbWUoU3R1TGlzdCkgLT4gU3R1REYzDQoNCmNsYXNzKFN0dURGMykNClN0dURGMw0KYXMuZGF0YS5mcmFtZShTdHVMaXN0LHN0cmluZ3NBc0ZhY3RvcnMgPSBGKSAtPiBTdHVERjQNCmNsYXNzKFN0dURGNCkNClN0dURGNA0KYGBgDQpgYGB7cn0NCmNsYXNzKFN0dURGKQ0KdHlwZW9mKFN0dURGKQ0KYGBgDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTktMDUtMTUgTGlsbGlhbiINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCmBgYHtyfQ0KTWF0MSA8LSBtYXRyaXgoDQogIGMoMTo2KSwgMiwzDQopDQpNYXQxDQpgYGANCg0KYGBge3J9DQpjbGFzcyhNYXQxKQ0KdHlwZW9mKE1hdDEpDQpgYGANCmBgYHtyfQ0KTWF0MiA8LSBtYXRyaXgoDQogIGMoImEiLCJiIiwiYyIsImQiKSwgMiwgMg0KKQ0KTWF0Mg0KYGBgDQpgYGB7cn0NClN0dUxpc3QgPC0gbGlzdCgNCiAg5a246JmfPWMoMTcyLDIxNCwzMjIsNDI1LDUxNyksDQogIOWnk+WQjT1jKCLlsI/mmI4iLCLlpKfpm4QiLCLog5bomY4iLCLlsI/mlrAiLCLlpKfnmb0iKSwNCiAg5oiQ57i+PWMoODAsNjAsOTAsNzAsNTApDQogICkNClN0dUxpc3QgDQpgYGANCmBgYHtyfQ0KU3R1REYgPC0gZGF0YS5mcmFtZSgNCiAg5a246JmfPWMoMTcyLDIxNCwzMjIsNDI1LDUxNyksDQogIOWnk+WQjT1jKCLlsI/mmI4iLCLlpKfpm4QiLCLog5bomY4iLCLlsI/mlrAiLCLlpKfnmb0iKSwNCiAg5oiQ57i+PWMoODAsNjAsOTAsNzAsNTApDQogICkNClN0dURGIA0KYGBgDQpgYGB7cn0NCmNsYXNzKFN0dURGJOWnk+WQjSkNCg0KU3R1REYk5aeT5ZCNIDwtIGFzLmNoYXJhY3RlcihTdHVERiTlp5PlkI0pDQpjbGFzcyhTdHVERiTlp5PlkI0pDQpgYGANCmBgYHtyfQ0KY2xhc3MoU3R1TGlzdCkNCmFzLmRhdGEuZnJhbWUoU3R1TGlzdCkgLT4gU3R1REYzDQoNCmNsYXNzKFN0dURGMykNClN0dURGMw0KYXMuZGF0YS5mcmFtZShTdHVMaXN0LHN0cmluZ3NBc0ZhY3RvcnMgPSBGKSAtPiBTdHVERjQNCmNsYXNzKFN0dURGNCkNClN0dURGNA0KYGBgDQpgYGB7cn0NCmNsYXNzKFN0dURGKQ0KdHlwZW9mKFN0dURGKQ0KYGBgDQpgYGB7cn0NCkxFVFRFUlMgIyBS5YWn6Kit5YWD57Sg5YC854K66Iux5paH5a2X5q+N576k55qEY2hhcmFjdGVyIHZlY3Rvcg0KY2hvc2VuTEVUVEVSUyA8LSBMRVRURVJTWzE6MTVdDQptYXRPYmoxIDwtIG1hdHJpeChjaG9zZW5MRVRURVJTLDUsMykNCm1hdE9iajENCmBgYA0KYGBge3J9DQpjaG9zZW5MRVRURVJTWzhdDQptYXRPYmoxWzhdDQpgYGANCmBgYHtyfQ0KbWF0T2JqMQ0KbWF0T2JqMVszLDJdIA0KbWF0T2JqMVtjKEYsRixUUlVFLEYsRiksYyhGLFRSVUUsRildDQpgYGANCmBgYHtyfQ0KU3R1REYNClN0dURGW2MoIuWnk+WQjSIsIuaIkOe4viIpXSANClN0dURGWzE6NSxjKCLlp5PlkI0iLCLmiJDnuL4iKV0gDQpgYGANCmBgYHtyfQ0KU3R1REZbLGMoIuWnk+WQjSIsIuaIkOe4viIpXQ0KYGBgDQoNCg==</div>
 
 
 
