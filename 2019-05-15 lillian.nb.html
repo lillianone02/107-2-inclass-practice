@@ -1807,10 +1807,46 @@ Mat2</code></pre>
 StuList </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3R1REYgPC0gZGF0YS5mcmFtZShcbiAg5a246JmfPWMoMTcyLDIxNCwzMjIsNDI1LDUxNyksXG4gIOWnk+WQjT1jKFwi5bCP5piOXCIsXCLlpKfpm4RcIixcIuiDluiZjlwiLFwi5bCP5pawXCIsXCLlpKfnmb1cIiksXG4gIOaIkOe4vj1jKDgwLDYwLDkwLDcwLDUwKVxuICApXG5TdHVERiBcbmBgYCJ9 -->
+<pre class="r"><code>StuDF &lt;- data.frame(
+  學號=c(172,214,322,425,517),
+  姓名=c(&quot;小明&quot;,&quot;大雄&quot;,&quot;胖虎&quot;,&quot;小新&quot;,&quot;大白&quot;),
+  成績=c(80,60,90,70,50)
+  )
+StuDF </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoU3R1REYk5aeT5ZCNKVxuXG5TdHVERiTlp5PlkI0gPC0gYXMuY2hhcmFjdGVyKFN0dURGJOWnk+WQjSlcbmNsYXNzKFN0dURGJOWnk+WQjSlcbmBgYCJ9 -->
+<pre class="r"><code>class(StuDF$姓名)
+
+StuDF$姓名 &lt;- as.character(StuDF$姓名)
+class(StuDF$姓名)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoU3R1TGlzdClcbmFzLmRhdGEuZnJhbWUoU3R1TGlzdCkgLT4gU3R1REYzXG5cbmNsYXNzKFN0dURGMylcblN0dURGM1xuYXMuZGF0YS5mcmFtZShTdHVMaXN0LHN0cmluZ3NBc0ZhY3RvcnMgPSBGKSAtPiBTdHVERjRcbmNsYXNzKFN0dURGNClcblN0dURGNFxuYGBgIn0= -->
+<pre class="r"><code>class(StuList)
+as.data.frame(StuList) -&gt; StuDF3
+
+class(StuDF3)
+StuDF3
+as.data.frame(StuList,stringsAsFactors = F) -&gt; StuDF4
+class(StuDF4)
+StuDF4</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoU3R1REYpXG50eXBlb2YoU3R1REYpXG5gYGAifQ== -->
+<pre class="r"><code>class(StuDF)
+typeof(StuDF)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTktMDUtMTUgTGlsbGlhbiINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCmBgYHtyfQ0KTWF0MSA8LSBtYXRyaXgoDQogIGMoMTo2KSwgMiwzDQopDQpNYXQxDQpgYGANCg0KYGBge3J9DQpjbGFzcyhNYXQxKQ0KdHlwZW9mKE1hdDEpDQpgYGANCmBgYHtyfQ0KTWF0MiA8LSBtYXRyaXgoDQogIGMoImEiLCJiIiwiYyIsImQiKSwgMiwgMg0KKQ0KTWF0Mg0KYGBgDQpgYGB7cn0NClN0dUxpc3QgPC0gbGlzdCgNCiAg5a246JmfPWMoMTcyLDIxNCwzMjIsNDI1LDUxNyksDQogIOWnk+WQjT1jKCLlsI/mmI4iLCLlpKfpm4QiLCLog5bomY4iLCLlsI/mlrAiLCLlpKfnmb0iKSwNCiAg5oiQ57i+PWMoODAsNjAsOTAsNzAsNTApDQogICkNClN0dUxpc3QgDQpgYGANCg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTktMDUtMTUgTGlsbGlhbiINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCmBgYHtyfQ0KTWF0MSA8LSBtYXRyaXgoDQogIGMoMTo2KSwgMiwzDQopDQpNYXQxDQpgYGANCg0KYGBge3J9DQpjbGFzcyhNYXQxKQ0KdHlwZW9mKE1hdDEpDQpgYGANCmBgYHtyfQ0KTWF0MiA8LSBtYXRyaXgoDQogIGMoImEiLCJiIiwiYyIsImQiKSwgMiwgMg0KKQ0KTWF0Mg0KYGBgDQpgYGB7cn0NClN0dUxpc3QgPC0gbGlzdCgNCiAg5a246JmfPWMoMTcyLDIxNCwzMjIsNDI1LDUxNyksDQogIOWnk+WQjT1jKCLlsI/mmI4iLCLlpKfpm4QiLCLog5bomY4iLCLlsI/mlrAiLCLlpKfnmb0iKSwNCiAg5oiQ57i+PWMoODAsNjAsOTAsNzAsNTApDQogICkNClN0dUxpc3QgDQpgYGANCmBgYHtyfQ0KU3R1REYgPC0gZGF0YS5mcmFtZSgNCiAg5a246JmfPWMoMTcyLDIxNCwzMjIsNDI1LDUxNyksDQogIOWnk+WQjT1jKCLlsI/mmI4iLCLlpKfpm4QiLCLog5bomY4iLCLlsI/mlrAiLCLlpKfnmb0iKSwNCiAg5oiQ57i+PWMoODAsNjAsOTAsNzAsNTApDQogICkNClN0dURGIA0KYGBgDQpgYGB7cn0NCmNsYXNzKFN0dURGJOWnk+WQjSkNCg0KU3R1REYk5aeT5ZCNIDwtIGFzLmNoYXJhY3RlcihTdHVERiTlp5PlkI0pDQpjbGFzcyhTdHVERiTlp5PlkI0pDQpgYGANCmBgYHtyfQ0KY2xhc3MoU3R1TGlzdCkNCmFzLmRhdGEuZnJhbWUoU3R1TGlzdCkgLT4gU3R1REYzDQoNCmNsYXNzKFN0dURGMykNClN0dURGMw0KYXMuZGF0YS5mcmFtZShTdHVMaXN0LHN0cmluZ3NBc0ZhY3RvcnMgPSBGKSAtPiBTdHVERjQNCmNsYXNzKFN0dURGNCkNClN0dURGNA0KYGBgDQpgYGB7cn0NCmNsYXNzKFN0dURGKQ0KdHlwZW9mKFN0dURGKQ0KYGBgDQoNCg==</div>
 
 
 
