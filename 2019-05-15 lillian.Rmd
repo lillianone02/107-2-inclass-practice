@@ -158,4 +158,36 @@ class(exData3$期間)
 exData3$期間<- ymd(exData3$期間)
 class(exData3$期間)
 ```
+```{r}
+isAsiaCrisis <- exData3$期間>=1997-06-01 &exData3$期間<=1998-12-01
+isAsiaCrisis
+
+錯了!時間沒有加ymd就只是字串
+```
+```{r}
+isAsiaCrisis <- exData3$期間>=ymd("1997-06-01") &exData3$期間<=ymd("1998-12-01")
+isAsiaCrisis
+```
+
+8.1.2
+```{r}
+library(readr)
+transcriptDataFinal <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcriptDataFinal.csv")
+```
+```{r}
+log <- transcriptDataFinal$學號=="92aS67fee"
+ transcriptDataFinal[log,]
+```
+
+```{r}
+supply_fun<- function(a,b,P){Qs<-a+b*P
+return(Qs)
+}
+demand_fun <- function(c,d,P){
+  Qd <- c-d*P
+  return(Qd)
+}
+```
+
+
 
