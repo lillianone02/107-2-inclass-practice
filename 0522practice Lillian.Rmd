@@ -54,6 +54,7 @@ ymd_hms_tzChange<- function(input,fromTzone,toTzone){
 }
 ymd_hms_tzChange("1973-02-21 12:05:22","America/New_York","Asia/Taipei")
 ```
+
 ```{r}
 library(stringr)
 sample(99:103,15,replace = T)-> yy
@@ -74,4 +75,26 @@ date_convert_twYM <- function(input, fromTime,toTime){
 }
 
 ```
+```{r}
+date_convert_twYM <- function(x){
+  library(stringr); library(lubridate)
+  yyyy <-as.integer(str_extract(x,"(?<=(民國))[:digit:]+"))+1911
+  mm <-str_extract(x,"[:digit:]+(?=月)")
+  yyyymmdd <- ymd(str_c(yyyy,mm,"01",sep="-"))
+  ans <- ymd(yyyymmdd)
+  return(ans)
+}
+```
+在function前端設定預設值
+```{r}
+date_convert_twYM <- function(x,dd="01"){
+  library(stringr); library(lubridate)
+  yyyy <-as.integer(str_extract(x,"(?<=(民國))[:digit:]+"))+1911
+  mm <-str_extract(x,"[:digit:]+(?=月)")
+  yyyymmdd <- ymd(str_c(yyyy,mm,dd,sep="-"))
+  ans <- ymd(yyyymmdd)
+  return(ans)
+}
 
+date_convert_twYM("民國100年10月10日")
+```
