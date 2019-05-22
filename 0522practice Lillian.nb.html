@@ -1767,9 +1767,76 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
+<p>#midterm 6.2</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuKGludm9pY2VMaXN0JOioguWWruaZguWNgD09XCJBbWVyaWNhL05ld19Zb3JrXCIpIC0+IG55TG9naWNcblxuYGBgIn0= -->
+<pre class="r"><code>(invoiceList$訂單時區==&quot;America/New_York&quot;) -&gt; nyLogic
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbnRyYW5zY3JpcHREYXRhRmluYWwgPC0gcmVhZF9jc3YoXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHBlbWFydGluL2dpdGh1Yi1kYXRhL21hc3Rlci90cmFuc2NyaXB0RGF0YUZpbmFsLmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>library(readr)
+transcriptDataFinal &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-data/master/transcriptDataFinal.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICC+x7i5ID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIL7HqaEgPSBcdTAwMWJbMzJtY29sX2RvdWJsZSgpXHUwMDFiWzM5bSxcbiAgvseodCA9IFx1MDAxYlszMW1jb2xfY2hhcmFjdGVyKClcdTAwMWJbMzltLFxuICC+x6Z+ID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIL7HtMEgPSBcdTAwMWJbMzJtY29sX2RvdWJsZSgpXHUwMDFiWzM5bSxcbiAgvse0waaowVogPSBcdTAwMWJbMzJtY29sX2RvdWJsZSgpXHUwMDFiWzM5bSxcbiAgvsekwLzGID0gXHUwMDFiWzMybWNvbF9kb3VibGUoKVx1MDAxYlszOW0sXG4gIGClsr/vrdfD/qdPoV2lsqJBv++iQbNxoV5gID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW1cbilcbiJ9 -->
+<pre><code>Parsed with column specification:
+cols(
+  戼㹥Ǹ戼㸹 = [31mcol_character()[39m,
+  戼㹥ǩ愼㸱 = [32mcol_double()[39m,
+  戼㹥Ǩt = [31mcol_character()[39m,
+  戼㹥Ǧ~ = [32mcol_double()[39m,
+  戼㹥Ǵ挼㸱 = [32mcol_double()[39m,
+  戼㹥Ǵ挼㸱愼㸶愼㸸挼㸱Z = [32mcol_double()[39m,
+  戼㹥Ǥ挼㸰戼㹣挼㸶 = [32mcol_double()[39m,
+  `愼㸵戼㸲戼㹦攼㹦愼㹤搼㸷挼㸳昼㹥愼㸷O愼㸱]愼㸵戼㸲愼㸲A戼㹦攼㹦愼㸲A戼㸳q愼㸱^` = [31mcol_character()[39m
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3R1ZGVudElEIDwtXCI5MmFTNjdmZWVcIiBcbnRyYW5zY3JpcHREYXRhRmluYWwk5a246JmfPT1zdHVkZW50SUQgLT4gbG9naUNob3NlblN0dWRlbnRcblxuc3ViU2FtcGxlIDwtIHRyYW5zY3JpcHREYXRhRmluYWxbbG9naUNob3NlblN0dWRlbnQsXVxuXG5zdW0oc3ViU2FtcGxlJOWtuOacn+aIkOe4vipzdWJTYW1wbGUk5a245YiG5pW4KS9cbiAgc3VtKHN1YlNhbXBsZSTlrbjliIbmlbgpIC0+IEdQQVxuYGBgIn0= -->
+<pre class="r"><code>studentID &lt;-&quot;92aS67fee&quot; 
+transcriptDataFinal$學號==studentID -&gt; logiChosenStudent
+
+subSample &lt;- transcriptDataFinal[logiChosenStudent,]
+
+sum(subSample$學期成績*subSample$學分數)/
+  sum(subSample$學分數) -&gt; GPA</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>請把以America/New_York時區輸入的時間字串“1973-02-21 12:05:22”，轉成date time class, 再改成Asia/Taipei時間顯示。 1.直接換</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG55bWRfaG1zKFwiMTk3My0wMi0yMSAxMjowNToyMlwiKS0+IGRhdGVOZXdfWW9ya1xud2l0aF90eihkYXRlTmV3X1lvcmssdHo9XCJBc2lhL1RhaXBlaVwiKS0+IGNoYW5nZWRhdGV0aW1lXG5gYGAifQ== -->
+<pre class="r"><code>
+ymd_hms(&quot;1973-02-21 12:05:22&quot;)-&gt; dateNew_York
+with_tz(dateNew_York,tz=&quot;Asia/Taipei&quot;)-&gt; changedatetime</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>2.寫function 再代入變數</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueW1kX2htc190ekNoYW5nZTwtIGZ1bmN0aW9uKGlucHV0LGZyb21Uem9uZSx0b1R6b25lKXtcbiAgdGltZTE8LSB5bWRfaG1zKGlucHV0LHR6PWZyb21Uem9uZSlcbiAgY2hhbmdlZGF0ZXRpbWU8LSB3aXRoX3R6KHRpbWUxLHR6PXRvVHpvbmUpXG4gIHJldHVybihjaGFuZ2VkYXRldGltZSlcbn1cbmBgYCJ9 -->
+<pre class="r"><code>ymd_hms_tzChange&lt;- function(input,fromTzone,toTzone){
+  time1&lt;- ymd_hms(input,tz=fromTzone)
+  changedatetime&lt;- with_tz(time1,tz=toTzone)
+  return(changedatetime)
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIjA1MjIgcHJhY3RpY2UiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIjA1MjIgcHJhY3RpY2UiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KI21pZHRlcm0gNi4yDQpgYGB7cn0NCmxpYnJhcnkocmVhZHIpDQppbnZvaWNlTGlzdCA8LSByZWFkX2NzdigiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RwZW1hcnRpbi9naXRodWItZGF0YS9tYXN0ZXIvaW52b2ljZUxpc3QuY3N2IiwNCmNvbF90eXBlcyA9IGNvbHMo6KiC5Zau5pmC6ZaTLuS7peioguWWruaZguWNgOmhr+ekui4gPSBjb2xfY2hhcmFjdGVyKCkpKQ0KbmFtZXMoaW52b2ljZUxpc3QpW1syXV0gPC0gIuioguWWruaZguWNgOS5i+S4i+WWruaZgumWkyINCmBgYA0KDQpgYGB7cn0NCihpbnZvaWNlTGlzdCToqILllq7mmYLljYA9PSJBbWVyaWNhL05ld19Zb3JrIikgLT4gbnlMb2dpYw0KKGludm9pY2VMaXN0JOioguWWruaZguWNgD09IkFzaWEvVGFpcGVpIikgLT4gdHBMb2dpY2FsDQoNCmludm9pY2VMaXN0JFVUQ+aZgumWk1tueUxvZ2ljYWxdIDwtDQogIHdpdGhfdHooeW1kX2htcyhpbnZvaWNlTGlzdCRg6KiC5Zau5pmC5Y2A5LmL5LiL5Zau5pmC6ZaTYFtueUxvZ2ljYWxdLA0KICAgICAgICAgIHR6PSJBbWVyaWNhL05ld19Zb3JrIiksdHpvbmU9IlVUQyIpDQppbnZvaWNlTGlzdCRVVEPmmYLplpNbdHBMb2dpY2FsXSA8LQ0KICB3aXRoX3R6KHltZF9obXMoaW52b2ljZUxpc3QkYOioguWWruaZguWNgOS5i+S4i+WWruaZgumWk2BbdHBMb2dpY2FsXSwNCiAgICAgICAgICB0ej0iQXNpYS9UYWlwZWkiKSx0em9uZT0iVVRDIikNCg0KaW52b2ljZUxpc3QgDQpgYGANCg0KYGBge3J9DQpsaWJyYXJ5KHJlYWRyKQ0KdHJhbnNjcmlwdERhdGFGaW5hbCA8LSByZWFkX2NzdigiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RwZW1hcnRpbi9naXRodWItZGF0YS9tYXN0ZXIvdHJhbnNjcmlwdERhdGFGaW5hbC5jc3YiKQ0KYGBgDQpgYGB7cn0NCnN0dWRlbnRJRCA8LSI5MmFTNjdmZWUiIA0KdHJhbnNjcmlwdERhdGFGaW5hbCTlrbjomZ89PXN0dWRlbnRJRCAtPiBsb2dpQ2hvc2VuU3R1ZGVudA0KDQpzdWJTYW1wbGUgPC0gdHJhbnNjcmlwdERhdGFGaW5hbFtsb2dpQ2hvc2VuU3R1ZGVudCxdDQoNCnN1bShzdWJTYW1wbGUk5a245pyf5oiQ57i+KnN1YlNhbXBsZSTlrbjliIbmlbgpLw0KICBzdW0oc3ViU2FtcGxlJOWtuOWIhuaVuCkgLT4gR1BBDQpgYGANCg0K6KuL5oqK5LulQW1lcmljYS9OZXdfWW9ya+aZguWNgOi8uOWFpeeahOaZgumWk+Wtl+S4siIxOTczLTAyLTIxIDEyOjA1OjIyIu+8jOi9ieaIkGRhdGUgdGltZSBjbGFzcywg5YaN5pS55oiQQXNpYS9UYWlwZWnmmYLplpPpoa/npLrjgIINCjEu55u05o6l5o+bDQpgYGB7cn0NCg0KeW1kX2htcygiMTk3My0wMi0yMSAxMjowNToyMiIpLT4gZGF0ZU5ld19Zb3JrDQp3aXRoX3R6KGRhdGVOZXdfWW9yayx0ej0iQXNpYS9UYWlwZWkiKS0+IGNoYW5nZWRhdGV0aW1lDQpgYGANCjIu5a+rZnVuY3Rpb24g5YaN5Luj5YWl6K6K5pW4DQpgYGB7cn0NCnltZF9obXNfdHpDaGFuZ2U8LSBmdW5jdGlvbihpbnB1dCxmcm9tVHpvbmUsdG9Uem9uZSl7DQogIHRpbWUxPC0geW1kX2htcyhpbnB1dCx0ej1mcm9tVHpvbmUpDQogIGNoYW5nZWRhdGV0aW1lPC0gd2l0aF90eih0aW1lMSx0ej10b1R6b25lKQ0KICByZXR1cm4oY2hhbmdlZGF0ZXRpbWUpDQp9DQpgYGANCg0K</div>
 
 
 
