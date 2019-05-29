@@ -1767,21 +1767,48 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Ctrl+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubm93IDwtIGZ1bmN0aW9uKCl7XG4gIGN1cnJlbnREYXRlVGltZSA8LSBTeXMudGltZSgpXG4gIGhoPC1ob3VyKGN1cnJlbnREYXRlVGltZSlcbiAgbW08LW1pbnV0ZShjdXJyZW50RGF0ZVRpbWUpXG4gIGNhdChcIjxlNz7ukIo8ZTU+7q+tPGU2Pu6mgFwiLGhoLFwi5pq67rO9IixtbSxcIjxlNT48ODg+74elIilcbn1cbmBgYCJ9 -->
+<pre class="r"><code>now &lt;- function(){
+  currentDateTime &lt;- Sys.time()
+  hh&lt;-hour(currentDateTime)
+  mm&lt;-minute(currentDateTime)
+  cat(&quot;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&quot;,hh,&quot;暺&lt;U+393C&gt;&lt;U+3E65&gt;&quot;,mm,&quot;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+383C&gt;&lt;U+3E36&gt;&quot;)
+}</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubm93KClcbmBgYCJ9 -->
+<pre class="r"><code>now()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYnJvd3NlVVJMKFwiaHR0cHM6Ly93d3cubnRwdS5lZHUudHdcIilcbmBgYCJ9 -->
+<pre class="r"><code>browseURL(&quot;https://www.ntpu.edu.tw&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYnJvd3NlVVJMKFwiaHR0cHM6Ly9ib29rZG93bi5vcmcvdHBlbWFydGluL250cHUtcHJvZ3JhbW1pbmctZm9yLWRhdGEtc2NpZW5jZS9mdW5jdGlvbi1hbmQtY29uZGl0aW9uYWwtZXhlY3V0aW9uLmh0bWwjcmV0dXJuaW5wdXRcIilcbmBgYCJ9 -->
+<pre class="r"><code>browseURL(&quot;https://bookdown.org/tpemartin/ntpu-programming-for-data-science/function-and-conditional-execution.html#returninput&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTktMDUtMjkiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KYGBge3J9DQpwbG90KGNhcnMpDQpgYGANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4NCg0KVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTktMDUtMjkiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCm5vdyA8LSBmdW5jdGlvbigpew0KICBjdXJyZW50RGF0ZVRpbWUgPC0gU3lzLnRpbWUoKQ0KICBoaDwtaG91cihjdXJyZW50RGF0ZVRpbWUpDQogIG1tPC1taW51dGUoY3VycmVudERhdGVUaW1lKQ0KICBjYXQoIuePvuWcqOaYryIsaGgsIum7niIsbW0sIuWIhiIpDQp9DQpgYGANCg0KYGBge3J9DQpub3coKQ0KYGBgDQoNCg0KYGBge3J9DQpicm93c2VVUkwoImh0dHBzOi8vd3d3Lm50cHUuZWR1LnR3IikNCmBgYA0KYGBge3J9DQpicm93c2VVUkwoImh0dHBzOi8vYm9va2Rvd24ub3JnL3RwZW1hcnRpbi9udHB1LXByb2dyYW1taW5nLWZvci1kYXRhLXNjaWVuY2UvZnVuY3Rpb24tYW5kLWNvbmRpdGlvbmFsLWV4ZWN1dGlvbi5odG1sI3JldHVybmlucHV0IikNCmBgYA0KDQoNCmBgYHtyfQ0KYGBgDQoNCg0KYGBge3J9DQpgYGANCg0K</div>
 
 
 
