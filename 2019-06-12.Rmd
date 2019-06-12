@@ -104,3 +104,12 @@ commitHistory[[i]]$commit$author$name -> saveCommitAuthor[[i]]
 ```{r}
 saveCommitAuthor
 ```
+3. for loop
+```{r}
+saveCommitAuthor <-
+  vector("character",length(commitHistory)) # 0.
+for(i in seq_along(commitHistory)){
+  commitHistory[[i]]$commit$author$name -> saveCommitAuthor[[i]]
+}
+saveCommitAuthor
+```
