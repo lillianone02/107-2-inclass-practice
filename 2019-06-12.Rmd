@@ -52,6 +52,26 @@ for (i in seq_along(gmailAddress)) {
 }
 ```
 ```{r}
-str_detect(gmailAddress,"@gmail.com", )
+# 開始設定
+gmailAddress <- c(
+  "tim@gmail.com",
+  "anita",
+  "yellen@gmail.com",
+  "huang@gmail.com"
+)
+cat("起始狀況\n")
+gmailAddress
+
+# for loop
+for(i in seq_along(gmailAddress)){
+  if(!str_detect(gmailAddress[[i]],"@gmail.com")){
+    correctGmailAddress <-
+      str_c(gmailAddress[[i]],"@gmail.com")
+    gmailAddress[[i]] <- correctGmailAddress
+  }
+}
+
+cat("修正後狀況\n")
+gmailAddress
 ```
 
